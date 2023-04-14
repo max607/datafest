@@ -23,3 +23,11 @@
 * What are the reasons for possible clusters of letter-box companies?
 * Letter-box company: central, just for financial benefits (??) -> google that
 
+# Umlaut / Accenture
+
+* Company
+* Sie fügen Wert hinzu - zu Sachen
+* 738k Angestellte
+* Strategic outlook on the digital economy - Treffen von super wichtigen Leuten
+* Daten sind wie Maschinenöl
+
