@@ -42,9 +42,15 @@
 * Rechtsformen (GmbH, AG, Genossenschaft, ...)
 * Ebersberg
 
-# mlr3
+# Networks
 
-```r
-library(mlr3)
-```
+* Sehen schön aus
+* Basic terminology (resilience, ...)
+* Cooles Thema
+* Wer verschwört?
+
+# Spacial data
+
+* https://thetruesize.com
+* ich freu mich auf morgen -> kaffee
 
