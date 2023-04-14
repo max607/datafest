@@ -38,5 +38,4 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-data.7z
-DataFest.2023
+data
