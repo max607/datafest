@@ -2,6 +2,8 @@
 
 [toc]
 
+* [Read Me](Read_Me.md)
+
 # Data
 
 * infas360 AG
@@ -23,6 +25,10 @@
 * What are the reasons for possible clusters of letter-box companies?
 * Letter-box company: central, just for financial benefits (??) -> google that
 
+# Own questions
+
+* Wer sind die big player?
+
 # Umlaut / Accenture
 
 * Company
@@ -30,4 +36,15 @@
 * 738k Angestellte
 * Strategic outlook on the digital economy - Treffen von super wichtigen Leuten
 * Daten sind wie Maschinenöl
+
+# Commercial register
+
+* Rechtsformen (GmbH, AG, Genossenschaft, ...)
+* Ebersberg
+
+# mlr3
+
+```r
+library(mlr3)
+```
 
