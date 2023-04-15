@@ -52,5 +52,10 @@
 # Spacial data
 
 * https://thetruesize.com
-* ich freu mich auf morgen -> kaffee
+* Ich freu mich auf morgen -> Kaffee
+
+# Letterbox
+
+* number of employes
+* too many companies in one specific point
 
