@@ -23,7 +23,7 @@ dt_all[grepl("Maya", gegenstand), ]
 dt_all[, .N, by = "firm_id"][order(N, decreasing = TRUE),][1:10,]
 
 # Cleaning dt_firms --------------------------------------------------------------------------------
-regex_umsatz <- "(?<=>\"\").*?(?=\"\")"
+regex <- "(?<=>\"\").*?(?=\"\")"
 
 dt_firms[, "umsatz_help" := lapply(.SD, function(x) regmatches(x, gregexpr(regex, x, perl = TRUE))),
          .SDcols = c("umsatz_staffel")]
@@ -35,11 +35,6 @@ dt_firms[, "mitarbeiter" := lapply(.SD, function(y) unlist(lapply(y, function(x)
          .SDcols = c("mitarbeiter_help")]
 dt_firms[, c("umsatz_help", "mitarbeiter_help", "umsatz_staffel", "mitarbeiter_staffel",
              "hr_nummer_info") := NULL]
-#dt_firms[, lapply(.SD, function(x) replace(x, which(x=="NANA"), NA))]
-
-#factoring
-fac_cols <- c("umsatz", "mitarbeiter", "status", "rechtsform")
-dt_firms[ , (fac_cols) := lapply(.SD, factor), .SDcols = fac_cols]
 
 # Cleaning dt_persons ------------------------------------------------------------------------------
 fac_cols <- c("geschlecht", "jahr")
