@@ -1,0 +1,102 @@
+---
+output:
+  ioslides_presentation:
+    widescreen: true
+    incremental: false
+link-citations: true
+urlcolor: blue
+title: Clustering of the German Comercial Register
+subtitle: Submitted as part of the DataFest2023
+date: "`r format(Sys.time(), '%d.%m.%Y')`"
+---
+
+<style>
+.build > * {
+    -webkit-transition: opacity 0ms ease-in-out;
+    -webkit-transition-delay: 0ms;
+    -moz-transition: opacity 0ms ease-in-out 0ms;
+    -o-transition: opacity 0ms ease-in-out 0ms;
+    transition: opacity 0ms ease-in-out 0ms;
+}
+slides > slide.title-slide {
+    background-image: url('figures/background_title_page_1920x1080.jpg');
+    background-size: 100% 100%;
+}
+slides > slide.dark {
+    background-image: url('figures/background_title_page_1920x1080.jpg') !important;
+    background-size: 100% 100% !important;
+}
+slides > slide.title-slide hgroup h1,
+slides > slide.title-slide hgroup h2,
+slides > slide.title-slide p,
+slides > slide,
+slides > slide hgroup h2 {
+    color: black;
+}
+slides > slide.dark hgroup h2 {
+    color: black;
+    font-size: 72px;
+    letter-spacing: 10;
+}
+div.footnotes {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 80%;
+    font-size: 0.6em;
+}
+table {
+    caption-side: bottom
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
+
+  $('footnote').each(function(index) {
+    var text  = $(this).html();
+    var fnNum = (index+1).toString();
+    $(this).html(fnNum.sup());
+
+    var footnote   = fnNum + '. ' + text + '<br/>';
+    var oldContent = $(this).parents('slide').children('div.footnotes').html();
+    var newContent = oldContent + footnote;
+    $(this).parents('slide').children('div.footnotes').html(newContent);
+  });
+});
+</script>
+
+```{r setup, include=FALSE}
+# rmarkdown settings
+knitr::opts_chunk$set(fig.align = "center", out.width = '80%', echo = FALSE, cache = FALSE,
+                      message = FALSE, warning = FALSE)
+
+# packages
+library(magrittr)
+library(data.table)
+library(ggplot2); theme_set(theme_bw())
+library(mlr3)
+library(mlr3cluster)
+
+# code
+source("R/read_data.R")
+source("R/gewerbesteuer.R")
+source("R/description-external-data.R")  # geospacial data
+source("R/clustering.R")
+source("R/plots-clustering")
+```
+
+# Party
+
+## Hard
+
+<div class="notes">
+* Test1
+* Test2
+* Test3
+</div>
+
+* test
+
