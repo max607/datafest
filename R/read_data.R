@@ -5,7 +5,6 @@ dt_persons <- fread("data/DataFest2023/personen.csv", nrows = 1000, na.strings=c
 dt_persons_firms <- fread("data/DataFest2023/relationen_person_firma.csv", nrows = 1000,
                           na.strings=c('\"\"',"","NA"))
 
-
 # Exploration --------------------------------------------------------------------------------------
 
 dt_all <- merge(dt_persons_firms, dt_firms, by = "firm_id", all = TRUE)
