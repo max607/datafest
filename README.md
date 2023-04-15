@@ -1,4 +1,4 @@
 # Roadmap
 
-* [ ] Join tables
-* [ ] Präsentation machen
+* [X] Join tables
+* [X] Präsentation machen

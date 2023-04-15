@@ -1,0 +1,96 @@
+---
+output:
+  ioslides_presentation:
+    widescreen: true
+    incremental: false
+link-citations: true
+urlcolor: blue
+title: Clustering of the German Comercial Register
+subtitle: Submitted as part of the DataFest2023
+date: "`r format(Sys.time(), '%d.%m.%Y')`"
+---
+
+<style>
+.build > * {
+    -webkit-transition: opacity 0ms ease-in-out;
+    -webkit-transition-delay: 0ms;
+    -moz-transition: opacity 0ms ease-in-out 0ms;
+    -o-transition: opacity 0ms ease-in-out 0ms;
+    transition: opacity 0ms ease-in-out 0ms;
+}
+slides > slide.title-slide hgroup h1,
+slides > slide.title-slide hgroup h2,
+slides > slide.title-slide p,
+slides > slide,
+slides > slide hgroup h2 {
+    color: black;
+}
+slides > slide.dark hgroup h2 {
+    color: black;
+    font-size: 72px;
+    letter-spacing: 10;
+}
+table {
+    caption-side: bottom
+}
+slides > slide:not(.nobackground):after {
+  content: '';
+}
+</style>
+
+
+```{r setup, include=FALSE}
+# rmarkdown settings
+knitr::opts_chunk$set(fig.align = "center", out.width = '80%', echo = FALSE, cache = FALSE,
+                      message = FALSE, warning = FALSE)
+
+# packages
+library(magrittr)
+library(data.table)
+library(ggplot2); theme_set(theme_bw())
+library(mlr3)
+library(mlr3cluster)
+library(mlr3pipelines)
+library(sf)
+library(tmap)
+
+# code
+source("R/read_data.R")
+source("R/gewerbesteuer.R")
+source("R/geospatial.R")
+source("R/clustering.R")
+source("R/plots-clustering")
+```
+
+# Party
+
+## Slide 1
+
+<div class="notes">
+* Test1
+* Test2
+* Test3
+</div>
+
+* test
+
+## Slide 2
+
+<div class="notes">
+* Test1
+* Test2
+* Test3
+</div>
+
+* test
+
+## Slide 3
+
+<div class="notes">
+* Test1
+* Test2
+* Test3
+</div>
+
+* test
+
