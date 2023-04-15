@@ -1,17 +1,9 @@
 
-plz = read.csv("data/plz_geocoord.csv")
+bayern = read_sf("data/bayern_gemeinden/VerwaltungsEinheit.shp")
+bayern = bayern[bayern$art == "Gemeinde", ]
 
-bayern = readOGR("data/bayern_gemeinden/vg5000_ebenen_1231/VG5000_GEM.shp")
-leaflet(bayern) %>% addPolygons()
+# tmap_options(check.and.fix = TRUE)
+# tmap_mode("view")
 
-# bayern = opq("Bayern") %>%
-#   add_osm_feature(
-#     key = "place",
-#     value = "region"
-#   )
-# 
-# district_bayern = osmdata_sf(bayern)
-# 
-# ggplot(data.frame()) +
-#   geom_sf(data = district_bayern$bbox) +
-#   coord_sf()
+tm_shape(bayern) +
+  tm_polygons()
