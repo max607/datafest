@@ -1,5 +1,7 @@
-dt_bw_gewerbst <- openxlsx::read.xlsx("data/hebesaetze/hebesaetze-realsteuern-8148001217005.xlsx", "bw", startRow = 3)
-dt_by_gewerbst <- openxlsx::read.xlsx("data/hebesaetze/hebesaetze-realsteuern-8148001217005.xlsx", "by", startRow = 3)
+dt_bw_gewerbst <- openxlsx::read.xlsx("data/hebesaetze/hebesaetze-realsteuern-8148001217005.xlsx",
+                                      "bw", startRow = 3)
+dt_by_gewerbst <- openxlsx::read.xlsx("data/hebesaetze/hebesaetze-realsteuern-8148001217005.xlsx",
+                                      "by", startRow = 3)
 
 read_dt_gewerb <- function(file, sheet) {
 	df <- openxlsx::read.xlsx(file, sheet, startRow = 3)
@@ -19,3 +21,4 @@ dt_gwsteuer$fed_state <- factor(dt_gwsteuer$fed_state, labels = c("baden_wuerten
 
 dt_gw_join <- dt_gwsteuer[, .(fed_state, ags8, gemeinde, population, Gewerbesteuer)]
 dt_firms = merge(dt_gwsteuer, dt_firms, by = "ags8", all.y = TRUE)
+
