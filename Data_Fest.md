@@ -58,4 +58,5 @@
 
 * number of employes
 * too many companies in one specific point
+* wz code -> 41/42 (construction), possible to ignore, e.g. hair cutter not possible to do letter-box company.
 
