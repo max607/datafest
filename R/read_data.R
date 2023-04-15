@@ -25,11 +25,11 @@ dt_all[, .N, by = "firm_id"][order(N, decreasing = TRUE),][1:10,]
 # Cleaning dt_firms --------------------------------------------------------------------------------
 regex_umsatz <- "(?<=>\"\").*?(?=\"\")"
 
-dt_firms[, "umsatz_help" := lapply(.SD, function(x) regmatches(x, gregexpr(regex, x, perl = TRUE))),
+dt_firms[, "umsatz_help" := lapply(.SD, function(x) regmatches(x, gregexpr(regex_umsatz, x, perl = TRUE))),
          .SDcols = c("umsatz_staffel")]
 dt_firms[, "umsatz" := lapply(.SD, function(y) unlist(lapply(y, function(x) x[1]))),
          .SDcols = c("umsatz_help")]
-dt_firms[, "mitarbeiter_help" := lapply(.SD, function(x) regmatches(x, gregexpr(regex, x, perl = TRUE))),
+dt_firms[, "mitarbeiter_help" := lapply(.SD, function(x) regmatches(x, gregexpr(regex_umsatz, x, perl = TRUE))),
          .SDcols = c("mitarbeiter_staffel")]
 dt_firms[, "mitarbeiter" := lapply(.SD, function(y) unlist(lapply(y, function(x) x[1]))),
          .SDcols = c("mitarbeiter_help")]
