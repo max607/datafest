@@ -60,3 +60,13 @@
 * too many companies in one specific point
 * wz code -> 41/42 (construction), possible to ignore, e.g. hair cutter not possible to do letter-box company.
 
+# Variablen
+
+* mitarbeiter_staffel
+* umsatz_staffel
+* rechtsform TODO: filtern nach AG GmbH
+* wz_code (branche) TODO: filtern nach sinnvollem
+* gemeinde (david)
+* gewerbesteuer (david)
+* kapital
+
