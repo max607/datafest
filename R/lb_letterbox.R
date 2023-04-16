@@ -27,3 +27,17 @@ string_all <- gsub('\\{', '', string_all)
 string_all <- gsub('\\}', '', string_all)
 wz_code_all = unlist(lapply(string_all, function(s) unlist(strsplit(s, ","))))
 
+#plot wzcodes
+library(ggplot2)
+wz_freq <- data.frame(table(wz_code)[table(wz_code) > 25])
+wz_freq_2 <- data.frame(wz_code =c(46, 64, 642, 68, 70,70101, 70109),
+                        Freq = c(44035,10224, 17968, 84836, 91807, 9783, 24343) / 1000)
+wz_freq["lb"] = TRUE
+wz_freq_2["lb"] = FALSE
+df <- rbind(wz_freq, wz_freq_2)
+ggplot(data = df, aes(wz_code, Freq, fill = lb)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.5) +
+  ylab("Frequency Score")
+  
+
+
