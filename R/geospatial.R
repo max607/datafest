@@ -22,7 +22,7 @@ dt_gw_join$ags = paste0("0", dt_gw_join$ags8)
 gemeinden = merge(gemeinden, dt_gw_join, by = "ags") # drop 175
 
 # gemeinden mit besonders niedrigen Steuern
-gemeinden[order(gemeinden$Gewerbesteuer), ] %>% View()
+# gemeinden[order(gemeinden$Gewerbesteuer), ] %>% View()
 
 # uncomment for interactive:
 # tmap_options(check.and.fix = TRUE)
@@ -32,10 +32,24 @@ tm_shape(rbind(bayern_kreise, bawue_kreise)) +
   tm_polygons(alpha = 0) +
 tm_shape(gemeinden) +
   tm_bubbles(col = "Gewerbesteuer",
-             size = 0.05, alpha = 0.9,
+             size = 0.5, alpha = 0.9,
              palette = c("#003300", "#66CC33", "#33FF33")) +
   tm_shape(rbind(bayern_land, bawue_land)) +
   tm_polygons(alpha = 0, lwd = 1, border.col = "#333333")
 
+
+# # dt_firms
+# dt_firms_gemeinden = dt_firms_filter[, .N, by = c("gem_key")]
+# colnames(dt_firms_gemeinden)[colnames(dt_firms_gemeinden) == "N"] = "potential_letterbox"
+# gemeinden_letterbox = merge(gemeinden, dt_firms_gemeinden, by.x = "ags", by.y = "gem_key", all.y = TRUE)
+# 
+# tm_shape(rbind(bayern_kreise, bawue_kreise)) +
+#   tm_polygons(alpha = 0) +
+#   tm_shape(gemeinden_letterbox) +
+#   tm_bubbles(col = "potential_letterbox",
+#              size = 0.5, alpha = 0.9,
+#              palette = c("lightyellow", "yellow", "darkred")) +
+#   tm_shape(rbind(bayern_land, bawue_land)) +
+#   tm_polygons(alpha = 0, lwd = 1, border.col = "#333333")
 
 
