@@ -68,9 +68,15 @@ source("R/lb_letterbox.R")
 ## Slide 1
 
 <div class="notes">
-* Test1
-* Test2
-* Test3
+# Trying to identify letterbox companies
+### criteria for potential letterbox companies
+* 0-5 employees
+* revenue >25.000 €
+* legal forms: Ltd., AG, GmbH, GmbH & Co. KG
+* at least 100 companies at the same address
+### further analysis
+* external data: Gewerbesteuer (taxes)
+* WZ codes
 </div>
 
 ```{r example}
