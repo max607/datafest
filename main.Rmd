@@ -73,7 +73,11 @@ source("R/plots-clustering")
 * Test3
 </div>
 
-* test
+```{r example}
+data(iris)
+ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
+  geom_point()
+```
 
 ## Slide 2
 
