@@ -5,10 +5,10 @@
 # * rechtsform TODO: filtern nach AG GmbH
 # * wz_code (branche) TODO: filtern nach sinnvollem
 # * gemeinde (david)
-# * gewerbesteuer (david)
 # * kapital
 vars <- c("mitarbeiter", "umsatz", "rechtsform", "wz_code", "gem_key", "Gewerbesteuer", "kapital")
 
+# * gewerbesteuer (david)
 
 library(ggcorrplot)
 model.matrix(~0+., data=dt_firms[, c("mitarbeiter", "umsatz")]) %>% 
