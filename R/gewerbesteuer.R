@@ -1,7 +1,3 @@
-dt_bw_gewerbst <- openxlsx::read.xlsx("data/hebesaetze/hebesaetze-realsteuern-8148001217005.xlsx",
-                                      "bw", startRow = 3)
-dt_by_gewerbst <- openxlsx::read.xlsx("data/hebesaetze/hebesaetze-realsteuern-8148001217005.xlsx",
-                                      "by", startRow = 3)
 
 read_dt_gewerb <- function(file, sheet) {
 	df <- openxlsx::read.xlsx(file, sheet, startRow = 3)
