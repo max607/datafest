@@ -65,18 +65,26 @@ source("R/lb_letterbox.R")
 
 # Party
 
-## Slide 1
+## Trying to identify letterbox companies
 
 <div class="notes">
-# Trying to identify letterbox companies
-### criteria for potential letterbox companies
+</div>
+
+### Criteria for potential letterbox companies
+
 * 0-5 employees
-* revenue >25.000 €
-* legal forms: Ltd., AG, GmbH, GmbH & Co. KG
-* at least 100 companies at the same address
-### further analysis
-* external data: Gewerbesteuer (taxes)
+* Revenue >25.000 €
+* Legal forms: Ltd., AG, GmbH, GmbH & Co. KG
+* At least 100 companies at the same address
+
+### Further analysis
+
+* External data: Gewerbesteuer (taxes)
 * WZ codes
+
+## Slide 2
+
+<div class="notes">
 </div>
 
 ```{r example}
@@ -85,22 +93,10 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
   geom_point()
 ```
 
-## Slide 2
-
-<div class="notes">
-* Test1
-* Test2
-* Test3
-</div>
-
-* test
 
 ## Slide 3
 
 <div class="notes">
-* Test1
-* Test2
-* Test3
 </div>
 
 * test
