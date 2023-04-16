@@ -91,7 +91,7 @@ source("R/lb_letterbox.R")
 p_geo
 ```
 
-## Slide 3
+## WZ code frequency
 
 <div class="notes">
 * future work:
@@ -99,5 +99,7 @@ p_geo
 * clustering
 </div>
 
-* test
+```{r}
+p_letterbox
+```
 

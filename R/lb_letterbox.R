@@ -35,9 +35,7 @@ wz_freq_2 <- data.frame(wz_code =c(46, 64, 642, 68, 70,70101, 70109),
 wz_freq["lb"] = TRUE
 wz_freq_2["lb"] = FALSE
 df <- rbind(wz_freq, wz_freq_2)
-ggplot(data = df, aes(wz_code, Freq, fill = lb)) +
+p_letterbox <- ggplot(data = df, aes(wz_code, Freq, fill = lb)) +
   geom_bar(stat = "identity", position = "dodge", width = 0.5) +
   ylab("Frequency Score")
-  
-
 
