@@ -28,9 +28,9 @@ gemeinden = merge(gemeinden, dt_gw_join, by = "ags") # drop 175
 # tmap_options(check.and.fix = TRUE)
 # tmap_mode("view")
 
-tm_shape(rbind(bayern_kreise, bawue_kreise)) +
+p_geo <- tm_shape(rbind(bayern_kreise, bawue_kreise)) +
   tm_polygons(alpha = 0) +
-tm_shape(gemeinden) +
+  tm_shape(gemeinden) +
   tm_bubbles(col = "Gewerbesteuer",
              size = 0.5, alpha = 0.9,
              palette = c("#003300", "#66CC33", "#33FF33")) +
@@ -42,7 +42,7 @@ tm_shape(gemeinden) +
 # dt_firms_gemeinden = dt_firms_filter[, .N, by = c("gem_key")]
 # colnames(dt_firms_gemeinden)[colnames(dt_firms_gemeinden) == "N"] = "potential_letterbox"
 # gemeinden_letterbox = merge(gemeinden, dt_firms_gemeinden, by.x = "ags", by.y = "gem_key", all.y = TRUE)
-# 
+#
 # tm_shape(rbind(bayern_kreise, bawue_kreise)) +
 #   tm_polygons(alpha = 0) +
 #   tm_shape(gemeinden_letterbox) +

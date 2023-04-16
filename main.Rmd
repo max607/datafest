@@ -82,21 +82,21 @@ source("R/lb_letterbox.R")
 * External data: Gewerbesteuer (taxes)
 * WZ codes
 
-## Slide 2
+## Gewerbesteuersatz
 
 <div class="notes">
 </div>
 
-```{r example}
-data(iris)
-ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
-  geom_point()
+```{r}
+p_geo
 ```
-
 
 ## Slide 3
 
 <div class="notes">
+* future work:
+* NLP on gegenstand column -> vector encoding
+* clustering
 </div>
 
 * test
