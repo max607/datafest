@@ -48,9 +48,9 @@ knitr::opts_chunk$set(fig.align = "center", out.width = '80%', echo = FALSE, cac
 library(magrittr)
 library(data.table)
 library(ggplot2); theme_set(theme_bw())
-library(mlr3)
-library(mlr3cluster)
-library(mlr3pipelines)
+# library(mlr3)
+# library(mlr3cluster)
+# library(mlr3pipelines)
 library(sf)
 library(tmap)
 
@@ -60,7 +60,7 @@ source("R/gewerbesteuer.R")
 source("R/geospatial.R")
 # source("R/clustering.R")
 source("R/lb_letterbox.R")
-source("R/plots-clustering")
+# source("R/plots-clustering")
 ```
 
 # Party
