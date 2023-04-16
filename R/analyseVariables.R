@@ -1,9 +1,12 @@
 # Variablen
 
-# * mitarbeiter_staffel
-# * umsatz_staffel
+# * mitarbeiter_staffel 0-5
+# * umsatz_staffel 100000-999999
+
 # * rechtsform TODO: filtern nach AG GmbH
+
 # * wz_code (branche) TODO: filtern nach sinnvollem
+
 # * gemeinde (david)
 # * kapital
 vars <- c("mitarbeiter", "umsatz", "rechtsform", "wz_code", "gem_key", "Gewerbesteuer", "kapital")

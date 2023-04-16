@@ -36,6 +36,10 @@ dt_firms[, "mitarbeiter" := lapply(.SD, function(y) unlist(lapply(y, function(x)
 dt_firms[, c("umsatz_help", "mitarbeiter_help", "umsatz_staffel", "mitarbeiter_staffel",
              "hr_nummer_info") := NULL]
 
+#factoring
+fac_cols <- c("umsatz", "mitarbeiter", "status", "rechtsform")
+dt_firms[ , (fac_cols) := lapply(.SD, factor), .SDcols = fac_cols]
+
 # Cleaning dt_persons ------------------------------------------------------------------------------
 fac_cols <- c("geschlecht", "jahr")
 dt_persons[ , (fac_cols) := lapply(.SD, factor), .SDcols = fac_cols]
