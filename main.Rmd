@@ -58,7 +58,8 @@ library(tmap)
 source("R/read_data.R")
 source("R/gewerbesteuer.R")
 source("R/geospatial.R")
-source("R/clustering.R")
+# source("R/clustering.R")
+source("R/lb_letterbox.R")
 source("R/plots-clustering")
 ```
 
